@@ -1,0 +1,59 @@
+/*Write a program that asks the user to enter a number within the range of 1 through 10. Use a switch statement to display the Roman numeral version of that number.
+
+Do not accept a number less than 1 or greater than 10. The output of the program should be just a Roman numeral, such as VII. Your program class should be called RomanNumerals
+
+Sample Run
+
+java RomanNumerals
+
+Enter a number in the range of 1 - 10: 4
+
+IV*/
+
+
+import java.util.Scanner;
+
+public class RomanNumerals{
+public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    String romanNumber;
+    
+    System.out.print("Enter a number from 1 to 10");
+    short num = input.nextShort();
+    if(num > 10 || num < 1){
+        System.out.print("Invalid entry");
+    System.exit(0);
+    }
+    
+    switch(num){
+        case 1: romanNumber = "I"; 
+        break;
+        case 2: romanNumber = "II"; 
+        break;
+        case 3: romanNumber = "III"; 
+        break;
+        case 4: romanNumber = "IV";
+        break;
+        case 5: romanNumber = "V"; 
+        break;
+        case 6: romanNumber = "VI"; 
+        break;
+        case 7: romanNumber = "VII"; 
+        break;
+        case 8: romanNumber = "VIII"; 
+        break;
+        case 9: romanNumber = "IX"; 
+        break;
+        case 10:romanNumber ="X";    
+        break;
+        default: romanNumber = "none";
+    }
+    
+    
+    System.out.print(romanNumber);
+}
+    
+    
+    
+    
+}
